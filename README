@@ -1,0 +1,21 @@
+Revamped code to create an organized document containing the question-answers in the Facebook free legal advice community( http://www.facebook.com/groups/452137104798374 )
+
+Required libraries
+------------------
+Apache commons io ( http://commons.apache.org/io/download_io.cgi ) Version 2.4 tested
+Json simple ( http://code.google.com/p/json-simple/downloads/list ) Version 1.1 tested
+
+
+
+Steps:
+
+1. Get all the messages posted in the group in a single file using the graph API
+
+	1.1 Query https://graph.facebook.com/452137104798374/feed?access_token=<access token>&limit=1000 from your web browser
+		replacing <access token> with your access token
+		1.1.1 You can get an access token by going to http://developers.facebook.com/tools/explorer and click "Get Access Token"
+			  Make sure that you select Extended Permissions -> "export_stream", "read_page_mailboxes" and "read_stream" while creating the token.
+    1.2 Copy the output into a text file(messages.txt) and save.
+			  
+2. Run the java code with fla.test.FormatJson.main as the main function and the path to messages.txt as argument.
+   e.g., java -cp ../lib/*:. fla.test.FormatJson ~/data/freelegaladvice/message.txt > ~/tmp/flamessageoutput.txt 
