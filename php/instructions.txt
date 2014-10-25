@@ -1,0 +1,16 @@
+Guys, after some hacking around, I have a quick-and-dirty first-cut version ready. The files required is available at https://www.dropbox.com/s/a6n39ze7cmwblx2/loadFLAFB.zip?dl=0 . This can be executed on an existing phpbb installation in order to add the FB archived content in a new forum. I request you to check it out if you have a local phpbb installation.
+
+First you have to decompress loadFLAFB.zip . Then the folder  loadFLAFB has to be copied into the root directory of your phpbb installation(i.e, where the first index.php etc. are there). 
+
+Next, open web browser and login as an admin into your phpbb website. Go to management panel and create a new top level forum(in which the facebook data has to be added). e.g.,  https://www.dropbox.com/s/akegv94ffn8k72v/Screenshot%20from%202014-10-25%2022%3A11%3A30.png?dl=0 . Administrator should have full access permissions in the forum. In the home page of the website, click on the newly created forum. Get the forum id from the current url in address bar: e.g. http://localhost/phpBB3Link/viewforum.php?f=5 means forum id is 5. Using text editor, edit the submitFile.php file in loadFLAFB folder and set $fbarchive_forum_id to the forum id obtained earlier. e.g., $fbarchive_forum_id = 5;
+
+Now, while logged in as an admin, open a new tab in browser, enter url: http://localhost/phpBB3Link/loadFLAFB/submitFLA.php and press ENTER. Wait for a few minutes(maybe 5 or more) while the data is loaded. Do not press stop or refresh. Meanwhile, through another tab you can check out if the posts are being added to the new forum.
+
+If successful, you should get something like: https://www.dropbox.com/s/00039zvzjsx6pxe/Screenshot%20from%202014-10-25%2022%3A09%3A47.png?dl=0
+https://www.dropbox.com/s/vlt1pxzue5y5jjw/Screenshot%20from%202014-10-25%2022%3A11%3A36.png?dl=0
+https://www.dropbox.com/s/nvx9r78v70q2dk9/Screenshot%20from%202014-10-25%2022%3A11%3A51.png?dl=0
+
+Other users can be given read-only permissions in the new forum.
+
+We can make revised versions of this based on comments. Please let me know what you think!
+
