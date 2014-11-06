@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="/home/harisankarh/repos/freelegaladvice-clone.git/fla-phoenix.git/lib/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="/home/harisankarh/repos/freelegaladvice-clone.git/fla-phoenix.git/lib/json_simple-1.1.jar"/>
 	<classpathentry kind="lib" path="/home/harisankarh/repos/freelegaladvice-clone.git/fla-phoenix.git/lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="/home/harisankarh/repos/freelegaladvice-clone.git/fla-phoenix.git/lib/restfb-1.6.16.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
